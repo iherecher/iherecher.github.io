@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stardew Valley</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+   .container {
+    display: flex;
+    flex-direction: column; /* จัดเรียงในแนวตั้ง */
+    align-items: center; /* จัดตำแหน่งกึ่งกลางในแนวนอน */
+    justify-content: center; /* จัดตำแหน่งกึ่งกลางในแนวตั้ง */
+    height: calc(100vh - 60px); /* ลดความสูงของ header (60px) ออกจากหน้าจอ */
+    text-align: center;
+    padding: 20px;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* จัดให้หัวข้ออยู่ด้านบนสุด */
+header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+header .game-title {
+    font-size: 24px;
+    color: #00ff00;
+    text-transform: uppercase;
+}
+
+.game-showcase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-images .logo {
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.game-preview img {
+    width: 150px;
+    margin: 5px;
+    border: 3px solid #fff;
+    border-radius: 5px;
+}
+
+.game-description {
+    margin-top: 20px; /* ตั้งขนาดตัวอักษร */
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 800px;
+
+    /* เพิ่มกรอบสี่เหลี่ยม */
+    border: 2px solid #00ff00; /* สีเขียว */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* เงา */
+}
+
+
+.menu {
+    margin-top: 20px;
+}
+
+.menu-button {
+    background-color: #ff69b4;/* มุมมองของปุ่ม เงาใต้ปุ่ม เพิ่มเอฟเฟกต์เปลี่ยนลักษณะปุ่มอย่างนุ่มนวลเมื่อเมาส์ชี้    */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px #d94f91;
+    transition: all 0.3s ease;
+}
+
+.menu-button:hover {
+    background-color: #d94f91;
+    box-shadow: 0 2px #b84277;
+    transform: translateY(2px);
+}
+
+    </style>
+    <div class="container">
+        <header>
+            <h1 class="game-title">GAME 2 | Oxygen Not Included</h1>
+        </header>
+        <main>
+            <section class="game-showcase">
+                <div class="game-images">
+                   
+
+    <video src="ox1.webm" preload="auto" controls width="600"></video>
+                    <div class="game-preview">
+                        <img src="ox1.jpg" alt="Farm Scene 1">
+                        <img src="ox2.jpg" alt="Farm Scene 2">
+                    </div>
+                </div>
+                <div class="game-description">
+                    <p>
+                        In the space-colony simulation game Oxygen Not Included you’ll find that scarcities of oxygen, warmth and sustenance are constant threats to your colony's survival. Guide colonists through the perils of subterranean asteroid living and watch as their population grows until they're not simply surviving, but thriving...
+                    </p>
+                </div>
+            </section>
+            <div class="menu">
+                <a href="game.html" class="menu-button">back</a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
