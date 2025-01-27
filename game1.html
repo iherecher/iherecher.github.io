@@ -1,122 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>เกมน่าเล่น 2024</title>
+    <title>Stardew Valley</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <style>
-        /* General Reset */
-*/* รีเซ็ตค่าเบื้องต้น */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: #000; /* พื้นหลังสีดำ */
-    color: #fff; /* ข้อความสีขาว */
-    font-family: 'Press Start 2P', cursive; /* ฟอนต์ Pixel Art */
+   .container {
+    display: flex;
+    flex-direction: column; /* จัดเรียงในแนวตั้ง */
+    align-items: center; /* จัดตำแหน่งกึ่งกลางในแนวนอน */
+    justify-content: center; /* จัดตำแหน่งกึ่งกลางในแนวตั้ง */
+    height: calc(100vh - 60px); /* ลดความสูงของ header (60px) ออกจากหน้าจอ */
     text-align: center;
     padding: 20px;
 }
 
-/* Header เรืองแสง */
-.neon-text {
-    font-size: 40px;
-    color: #0ff; /* สีฟ้านีออน */
-    text-shadow: 
-        0 0 5px #0ff,
-        0 0 10px #0ff,
-        0 0 20px #00f,
-        0 0 40px #00f; /* เงาเรืองแสงสีฟ้า */
-    margin-bottom: 50px;
-}
 
-/* ปุ่มสไตล์นีออน */
-.neon-button {
-    display: inline-block;
-    margin: 10px;
-    padding: 15px 30px;
-    color: #fff; /* สีตัวหนังสือ */
-    font-size: 16px;
-    text-decoration: none;
-    text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 20px #ff00ff; /* เงาสีชมพู */
-    background-color: transparent;
-    border: 2px solid #ff00ff; /* ขอบสีชมพู */
-    border-radius: 8px;
-    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff; /* ขอบเงาเรืองแสง */
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-}
-
-.neon-button:hover {
-    color: #000;
-    background-color: #ff00ff; /* พื้นหลังนีออน */
-    box-shadow: 0 0 10px #ff00ff, 0 0 30px #ff00ff, 0 0 50px #ff00ff;
-}
-
-/* ปุ่มย้อนกลับ */
-.back-button {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    padding: 10px 20px;
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
     color: #fff;
-    background: transparent;
-    border: 2px solid #00ff00; /* ขอบเขียวนีออน */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* จัดให้หัวข้ออยู่ด้านบนสุด */
+header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+header .game-title {
+    font-size: 24px;
+    color: #00ff00;
+    text-transform: uppercase;
+}
+
+.game-showcase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-images .logo {
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.game-preview img {
+    width: 150px;
+    margin: 5px;
+    border: 3px solid #fff;
     border-radius: 5px;
-    text-decoration: none;
-    font-size: 14px;
-    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
-    box-shadow: 0 0 10px #00ff00;
+}
+
+.game-description {
+    margin-top: 20px; /* ตั้งขนาดตัวอักษร */
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 800px;
+
+    /* เพิ่มกรอบสี่เหลี่ยม */
+    border: 2px solid #00ff00; /* สีเขียว */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* เงา */
+}
+
+
+.menu {
+    margin-top: 20px;
+}
+
+.menu-button {
+    background-color: #ff69b4;/* มุมมองของปุ่ม เงาใต้ปุ่ม เพิ่มเอฟเฟกต์เปลี่ยนลักษณะปุ่มอย่างนุ่มนวลเมื่อเมาส์ชี้    */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px #d94f91;
     transition: all 0.3s ease;
 }
 
-.back-button:hover {
-    background-color: #00ff00; /* สีเขียวตอน hover */
-    color: #000;
-    box-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00;
+.menu-button:hover {
+    background-color: #d94f91;
+    box-shadow: 0 2px #b84277;
+    transform: translateY(2px);
 }
-
 
     </style>
     <div class="container">
-        <!-- Top Navigation or Title -->
-        <a href="web.html" class="back-button">🔙 ย้อนกลับ</a>
+        <header>
+            <h1 class="game-title">GAME 1 | STARDEW VALLEY</h1>
+        </header>
+        <main>
+            <section class="game-showcase">
+                <div class="game-images">
+                   
 
-        <div class="header">
-            <div class="top-button">เกมที่น่าเล่น 2024</div>
-            <div class="stats">
-                <span>🗡️ 01</span>
-                <span>💎 07</span>
-                <span>⭐ 12</span>
-                <span class="hearts">💖💖💖💖💖</span>
+    <video src="satr1.webm" preload="auto" controls width="600"></video>
+                    <div class="game-preview">
+                        <img src="satr1.jpg" alt="Farm Scene 1">
+                        <img src="star2.jpg" alt="Farm Scene 2">
+                    </div>
+                </div>
+                <div class="game-description">
+                    <p>
+                        Stardew Valley เป็นเกมปลูกผักที่ได้รับความนิยมจากทั่วโลก โดยได้รับแรงบันดาลใจจากเกม Harvest Moon: Back to Nature 
+                        เกมนี้เป็นเกมปลูกผักที่ช่วยให้ผู้เล่นสามารถหลีกหนีความวุ่นวายในชีวิต ผู้เล่นสามารถสร้างฟาร์มเล็ก ๆ ของตัวเอง 
+                        และสำรวจพื้นที่รอบ ๆ ฟาร์ม พบเพื่อนบ้าน เลี้ยงสัตว์ ทำฟาร์ม และอื่นๆ
+                    </p>
+                </div>
+            </section>
+            <div class="menu">
+                <a href="game.html" class="menu-button">back</a>
             </div>
-        </div>
-        
-        <!-- Main Section -->
-        <div class="main-content">
-            <h1>GAME</h1>
-            <h2>น่าเล่น</h2>
-            <h1>2024</h1>
-            <div class="game-options">
-                <a href="web.html" class="game-button">game1</a>
-                <a href="web.html" class="game-button">game2</a>
-                <a href="web.html" class="game-button">game3</a>
-
-            </div>
-        </div>
-        
-        <!-- Bottom Section -->
-        <div class="footer">
-            <img src="https://i.pinimg.com/originals/1b/34/df/1b34dfc0a9bf5563e0f960a24b6862db.gif" alt="" width="50" height="50" ></p>
-            <img src="https://i.pinimg.com/originals/1b/34/df/1b34dfc0a9bf5563e0f960a24b6862db.gif" alt="" width="50" height="50" ></p>
-        </div>
+        </main>
     </div>
 </body>
 </html>
